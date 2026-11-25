@@ -1,0 +1,14 @@
+# Atari GameStation Go — unified controller database (SDL2, bundled 2.28.5 numbering)
+#
+# agpio-keys: the console's built-in keypad/buttons (two instances, merged by
+# the ports' direct reader). Numbering per the on-device button walk.
+1900e97c010000000100000000010000,agpio-keys,a:b2,b:b4,x:b1,y:b5,back:b7,start:b8,leftshoulder:b3,rightshoulder:b6,dpup:b26,dpdown:b29,dpleft:b27,dpright:b28,lefttrigger:b9,righttrigger:b10,misc1:b25,touchpad:b15,platform:Linux
+#
+# GameStation wireless gamepad, paired through the console's proprietary
+# receiver. Enumerates as "LiteStar PC-GamePad" (same GUID as the console's
+# built-in gamepad node, which no port currently binds). Calibrated by
+# on-device button walk: dpad 30/33/31/32, A=1 B=3 X=0 Y=4, shoulders 2/5,
+# triggers 8/9, select=6 start=7. No analog sticks; no home button.
+# NOTE: the pad creates NO hotplug event on pair/unpair -- "connected" can
+# only be inferred from input activity on this device.
+0300f186ff1100000839000001010000,LiteStar PC-GamePad,a:b1,b:b3,x:b0,y:b4,back:b6,start:b7,leftshoulder:b2,rightshoulder:b5,lefttrigger:b8,righttrigger:b9,dpup:b30,dpdown:b33,dpleft:b31,dpright:b32,misc1:b29,platform:Linux
